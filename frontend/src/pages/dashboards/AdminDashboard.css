@@ -1,0 +1,231 @@
+.admin-dash {
+  display: grid;
+  gap: 16px;
+}
+
+.admin-hero {
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  border-radius: 18px;
+  padding: 18px;
+  background:
+    linear-gradient(120deg, rgba(255, 255, 255, 0.94), rgba(239, 246, 255, 0.84));
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.admin-kicker {
+  margin: 0 0 4px;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.admin-hero-chips {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  min-width: min(100%, 420px);
+}
+
+.admin-chip {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: rgba(255, 255, 255, 0.85);
+  font-weight: 600;
+  font-size: 13px;
+  text-align: center;
+}
+
+.admin-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.admin-metric-card {
+  border: 1px solid rgba(148, 163, 184, 0.32);
+  border-radius: 14px;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.metric-label {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.metric-value {
+  margin: 8px 0 4px;
+  font-size: 28px;
+  line-height: 1;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.metric-meta {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.admin-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.admin-action-card {
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 14px;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  color: inherit;
+  display: grid;
+  gap: 8px;
+  transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
+}
+
+.admin-action-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(37, 99, 235, 0.42);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.12);
+}
+
+.admin-link {
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.admin-checklist {
+  margin-top: 2px;
+}
+
+.admin-checklist ul {
+  margin: 8px 0 0;
+  padding-left: 18px;
+}
+
+.admin-secondary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.admin-panel {
+  border: 1px solid rgba(148, 163, 184, 0.32);
+  border-radius: 14px;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.admin-panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.admin-panel-head h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.admin-inline-link {
+  color: var(--primary);
+  font-size: 13px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.admin-list {
+  display: grid;
+  gap: 8px;
+}
+
+.admin-list-item {
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 10px;
+  padding: 10px;
+  background: rgba(248, 250, 252, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.admin-list-title {
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.admin-pill {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  background: rgba(226, 232, 240, 0.7);
+  white-space: nowrap;
+}
+
+.admin-pill.high,
+.admin-pill.critical,
+.admin-pill.rejected {
+  color: #991b1b;
+  border-color: rgba(248, 113, 113, 0.45);
+  background: rgba(254, 226, 226, 0.85);
+}
+
+.admin-pill.open,
+.admin-pill.pending {
+  color: #92400e;
+  border-color: rgba(251, 191, 36, 0.45);
+  background: rgba(254, 243, 199, 0.9);
+}
+
+.admin-pill.in_progress,
+.admin-pill.approved,
+.admin-pill.resolved {
+  color: #1e40af;
+  border-color: rgba(96, 165, 250, 0.45);
+  background: rgba(219, 234, 254, 0.86);
+}
+
+@media (max-width: 1100px) {
+  .admin-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 800px) {
+  .admin-actions {
+    grid-template-columns: 1fr;
+  }
+  .admin-secondary-grid {
+    grid-template-columns: 1fr;
+  }
+  .admin-hero-chips {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .admin-metrics {
+    grid-template-columns: 1fr;
+  }
+}

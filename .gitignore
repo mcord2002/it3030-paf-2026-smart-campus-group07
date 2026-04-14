@@ -1,0 +1,8 @@
+**/target/
+**/build/
+**/node_modules/
+**/.idea/
+**/*.iml
+**/uploads/
+**/.env.local
+**/.env.*.local
