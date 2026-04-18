@@ -16,24 +16,14 @@ api.interceptors.request.use((config) => {
 api.interceptors.response.use(
   (r) => r,
   (err) => {
-    const data = err.response?.data;
-    const base =
-      data?.message ||
-      data?.error ||
+    const msg =
+      err.response?.data?.message ||
+      err.response?.data?.error ||
       err.message ||
       'Request failed';
-    const code = data?.code ? String(data.code) : '';
-    const status = err.response?.status;
-    const msg =
-      code && !base.toLowerCase().includes(code.toLowerCase())
-        ? `${base} (${code}${status ? `, HTTP ${status}` : ''})`
-        : status && base === 'Unexpected error'
-          ? `${base} (HTTP ${status})`
-          : base;
     const enriched = new Error(msg);
     enriched.status = err.response?.status;
     enriched.details = err.response?.data;
-    enriched.code = code || undefined;
     return Promise.reject(enriched);
   }
 );

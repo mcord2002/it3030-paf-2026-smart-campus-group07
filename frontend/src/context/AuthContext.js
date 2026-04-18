@@ -22,11 +22,6 @@ export function AuthProvider({ children }) {
   const logout = useCallback(() => {
     localStorage.removeItem(TOKEN_KEY);
     localStorage.removeItem(USER_KEY);
-    try {
-      sessionStorage.removeItem('campus_hub_google_portal');
-    } catch {
-      /* ignore */
-    }
     setToken(null);
     setUser(null);
   }, []);
@@ -41,16 +36,6 @@ export function AuthProvider({ children }) {
   const login = useCallback(
     async (email, password) => {
       const { data } = await api.post('/auth/login', { email, password });
-      persist(data.token, data.user);
-      return data.user;
-    },
-    [persist]
-  );
-
-  const loginWithGoogle = useCallback(
-    async (idToken, portal) => {
-      const body = portal ? { idToken, portal } : { idToken };
-      const { data } = await api.post('/auth/google', body);
       persist(data.token, data.user);
       return data.user;
     },
@@ -72,11 +57,10 @@ export function AuthProvider({ children }) {
       user,
       isAuthenticated: Boolean(token && user),
       login,
-      loginWithGoogle,
       register,
       logout,
     }),
-    [token, user, login, loginWithGoogle, register, logout]
+    [token, user, login, register, logout]
   );
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
