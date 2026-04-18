@@ -1,3 +1,4 @@
+
 package com.campus.hub.dto.booking;
 
 import jakarta.validation.constraints.NotBlank;

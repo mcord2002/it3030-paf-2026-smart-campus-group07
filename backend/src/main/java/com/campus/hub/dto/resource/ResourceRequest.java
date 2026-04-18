@@ -1,3 +1,5 @@
+
+
 package com.campus.hub.dto.resource;
 
 import com.campus.hub.domain.ResourceStatus;
