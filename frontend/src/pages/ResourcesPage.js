@@ -4,8 +4,8 @@ import { useAuth } from '../context/AuthContext';
 import { hasRole } from '../utils/roles';
 import './OperationsPages.css';
 
-// Icon components
-const IconPackage = () => <svg className="dashboard-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>;
+
+
 
 const getTypeIcon = (type) => {
     const icons = {
