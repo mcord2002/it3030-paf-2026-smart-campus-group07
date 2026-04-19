@@ -144,3 +144,5 @@ public class AuthService {
 		return sb.toString().trim();
 	}
 }
+
+//ppRole Enum and Role Entity/Model
