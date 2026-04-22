@@ -14,7 +14,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 import java.time.Instant;
-
+//Entity
 @Entity
 @Table(name = "bookings")
 public class Booking {
