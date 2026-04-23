@@ -1,3 +1,4 @@
+//create booking requestmodel
 package com.campus.hub.dto.booking;
 
 import jakarta.validation.constraints.Min;
