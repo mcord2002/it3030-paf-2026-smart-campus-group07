@@ -19,6 +19,8 @@ import jakarta.persistence.Table;
 // Java time API for timestamps
 import java.time.Instant;
 
+//Entity
+
 // Marks this class as a database entity
 @Entity
 

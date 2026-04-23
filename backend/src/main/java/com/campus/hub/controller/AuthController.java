@@ -39,3 +39,21 @@ public class AuthController {
 		return authService.loginWithGoogle(request);
 	}
 }
+
+
+//Add Backend Endpoints for Role Management
+//Create the backend API endpoints for updating and fetching user roles.
+
+
+//  Add GoogleTokenService and OAuth Config 
+//  Set up the GoogleTokenService and initial OAuth configuration files for Google OAuth integration.
+
+//Implement OAuth Login Endpoint and Callback 
+//  Set up the OAuth login and callback endpoints to handle user login via Google.
+
+
+//Integrate JWT Token Generation for OAuth Users 
+// After successful OAuth login, generate a JWT token for the user.
+
+//Add Google OAuth Button and Flow to Frontend 
+// //Create a Google OAuth login button and integrate the login flow on the frontend.

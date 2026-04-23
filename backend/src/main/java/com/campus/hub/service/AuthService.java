@@ -144,3 +144,9 @@ public class AuthService {
 		return sb.toString().trim();
 	}
 }
+
+//ppRole Enum and Role Entity/Model
+//Implement Role Assignment in AuthService
+
+//Integrate JWT Token Generation for OAuth Users 
+// After successful OAuth login, generate a JWT token for the user.
